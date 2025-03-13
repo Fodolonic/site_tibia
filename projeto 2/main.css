@@ -1,0 +1,482 @@
+:root {
+  --pixel-bg: lightblue;
+  /* Fundo */
+  --pixel-border: black;
+  /* Borda interna */
+  --pixel-border-2: white;
+  /* Borda do meio */
+  --pixel-border-3: black;
+  /* Borda externa */
+  --pixel: 4px;
+  /* Tamanho do pixel */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section h2,
+section h3,
+form button {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body,
+input,
+textarea {
+  font-family: "ＭＳ Ｐゴシック";
+  background-color: #ffffff;
+  font-size: 13px;
+}
+
+body {
+  background-color: #000;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  padding-top: 330px;
+  transition: padding-top 0.5s ease-in-out;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 300px;
+  background-color: #061021;
+  background-image: url("https://static.tibia.com/images/global/header/background-artwork.webp");
+  background-position: top;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+/* TITLE INSIDE HEADER */
+header h1 {
+  font-size: 82px;
+  color: #fef0d6;
+  line-height: 230px;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  text-shadow: #bc42e8 1px 0 10px;
+  font-family: "Jacquard 24", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* NAVBAR */
+nav {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+nav a {
+  color: #fef0d6;
+  display: inline-block;
+  padding: 10px 15px;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+nav a:hover {
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* STICKY HEADER */
+body.sticky-header {
+  padding-top: 100px;
+}
+
+body.sticky-header header {
+  height: 60px;
+  background-color: #061021;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  opacity: 0.95;
+  transition: all 0.3s ease-in-out;
+}
+
+/* SHRUGS HEADER WHNE SCROLLING */
+body.sticky-header header h1 {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.links-list {
+  display: flex;
+  margin-top: 10px;
+}
+
+.links-list img {
+  height: 16px;
+}
+
+.links-list li {
+  display: inline;
+}
+
+section {
+  padding: 24px 0;
+}
+
+section h2 {
+  margin-bottom: 16px;
+}
+
+section p {
+  margin-bottom: 8px;
+}
+
+.store-front {
+  margin-right: 32px;
+}
+
+.social-links img {
+  height: 24px;
+}
+
+.social-links li {
+  display: inline;
+  margin-right: 8px;
+}
+
+.social-links li a {
+  text-decoration: none;
+}
+
+.links-list li a {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+  background: black;
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  align-content: center;
+}
+
+#contact .container,
+#npcs .container {
+  display: block;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+form textarea {
+  resize: none;
+  height: 180px;
+}
+
+section h3 {
+  margin-bottom: 16px;
+}
+
+form button {
+  background-color: #182c61;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #314e9e;
+}
+
+/* CUSTOM BUTTON */
+
+.btn {
+  text-transform: uppercase;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #17191a;
+  /* Altera cor ao passar o mouse */
+  font-size: 15px;
+  box-shadow: #bc42e8 2px 2px;
+}
+
+/* END CUSTOM BUTTON */
+
+input:focus,
+textarea:focus {
+  outline-color: #182c61;
+}
+
+footer {
+  background-color: #5a2800;
+  color: #ecf0f1;
+  padding: 16px, 0;
+}
+
+/* CARD */
+
+.card-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.card-img {
+  width: 200px;
+  background: white;
+  border: solid 4px white;
+  box-shadow: black 3px 3px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.card-description {
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+
+/* MARGINS AND PADDINGS */
+
+.margin-top-base {
+  margin-top: 16px;
+}
+
+.margin-top-m {
+  margin-top: 24px;
+}
+
+.padding-top-m {
+  padding-top: 24px;
+}
+
+/* OTHERS */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #debb9d;
+  margin: 20px 0;
+  margin-top: 20px;
+}
+
+/* CARROSSEL */
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "ＭＳ Ｐゴシック";
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  cursor: url("cursor-blade.cur"), auto;
+}
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.pixelify-sans-text {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SLIDER */
+
+.slider {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider__dot {
+  width: 16px;
+  height: 16px;
+  margin: 2rem 16px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: #ccc;
+  outline: 8px solid #ccc;
+  outline-offset: -8px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  appearance: none;
+  backface-visibility: hidden;
+}
+
+.slider__dot:checked {
+  background-color: #333;
+  animation: check 0.5s linear forwards;
+}
+
+.slider__dot:checked:nth-of-type(1)~.slider__inner {
+  transform: translateX(0%);
+}
+
+.slider__dot:checked:nth-of-type(2)~.slider__inner {
+  transform: translateX(-25%);
+}
+
+.slider__dot:checked:nth-of-type(3)~.slider__inner {
+  transform: translateX(-50%);
+}
+
+.slider__dot:checked:nth-of-type(4)~.slider__inner {
+  transform: translateX(-75%);
+}
+
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  transition: all 1s ease-out;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.slider__body {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.slider__image {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 16px #333, 0 0 0 48px rgba(51, 51, 51, 0.2);
+  }
+
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+.image_1 {
+  background-image: url('https://static.tibia.com/images/abouttibia/tibia_screenshot_3.png');
+  background-size: cover;
+}
+.image_2 {
+  background-image:url('https://static.tibia.com/images/abouttibia/tibia_screenshot_5.png');
+  background-size: cover;
+}
+.image_3 {
+  background-image:url('https://static.tibia.com/images/abouttibia/tibia_screenshot_8.png');
+  background-size: cover;
+}
+.image_4 {
+  background-image:url('https://static.tibia.com/images/abouttibia/tibia_screenshot_11.png');
+  background-size: cover;
+}
+
+
+/* BOX PATTERN */
+
+.box {
+  background: url("https://static.tibia.com/images/global/content/scroll.gif");
+  padding: 34px;
+  border: 2px #debb9d solid;
+  color: #5a2800;
+  box-shadow: 0 0 0 5px #8b5a2b;
+  /* Ajuste a cor e espessura aqui */
+}
+
+/* VIDEO FRAME */
+
+.video-embed {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
